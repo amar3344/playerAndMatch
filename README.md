@@ -6,29 +6,29 @@ Write APIs to perform operations on the tables `player_details`, `match_details`
 
 **Player Details Table**
 
-| Column    | Type    |
-| ---------- | ------- |
+| Column      | Type    |
+| ----------- | ------- |
 | player_id   | INTEGER |
 | player_name | TEXT    |
 
 **Match Details Table**
 
-| Column    | Type    |
-| ---------- | ------- |
-| match_id   | INTEGER |
-| match | TEXT    |
-|year|INTEGER|
+| Column   | Type    |
+| -------- | ------- |
+| match_id | INTEGER |
+| match    | TEXT    |
+| year     | INTEGER |
 
 **Player Match Score Table**
 
-| Column    | Type    |
-| ---------- | ------- |
-| player_match_id   | INTEGER |
-| player_id | INTEGER    |
-|match_id|INTEGER|
-|score|INTEGER|
-|fours | INTEGER |
-|sixes | INTEGER |
+| Column          | Type    |
+| --------------- | ------- |
+| player_match_id | INTEGER |
+| player_id       | INTEGER |
+| match_id        | INTEGER |
+| score           | INTEGER |
+| fours           | INTEGER |
+| sixes           | INTEGER |
 
 ### API 1
 
@@ -44,7 +44,7 @@ Returns a list of all the players in the player table
 
 ```
 [
-  { 
+  {
     playerId: 1,
     playerName: "Ram"
   },
@@ -66,7 +66,7 @@ Returns a specific player based on the player ID
 #### Response
 
 ```
-{ 
+{
   playerId: 2,
   playerName: "Joseph"
 }
@@ -96,8 +96,6 @@ Updates the details of a specific player based on the player ID
 Player Details Updated
 ```
 
-
-
 ### API 4
 
 #### Path: `/matches/:matchId/`
@@ -111,7 +109,7 @@ Returns the match details of a specific match
 #### Response
 
 ```
-{ 
+{
   matchId: 18,
   match: "RR vs SRH",
   year: 2011
@@ -132,7 +130,7 @@ Returns a list of all the matches of a player
 
 ```
 [
-  { 
+  {
     matchId: 1,
     match: "SRH vs MI",
     year: 2016
@@ -141,7 +139,6 @@ Returns a list of all the matches of a player
   ...
 ]
 ```
-
 
 ### API 6
 
@@ -157,15 +154,13 @@ Returns a list of players of a specific match
 
 ```
 [
-  { 
+  {
     playerId: 2,
     playerName: "Joseph"
   },
   ...
 ]
 ```
-
-
 
 ### API 7
 
